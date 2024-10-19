@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.activities.">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/custom_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/add_new_rent"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="?attr/actionBarSize">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_gravity="center_horizontal"
+            android:padding="24dp">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp">
+                <Spinner
+                    android:id="@+id/spinner_property_type"
+                    android:layout_width="142pt"
+                    android:layout_height="30pt"
+
+                    ></Spinner>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp">
+                <Spinner
+                    android:id="@+id/spinner_bedroom"
+                    android:layout_width="142pt"
+                    android:layout_height="30pt"
+
+                    ></Spinner>
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/Date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:drawableLeft="@drawable/date_range"
+                android:drawablePadding="8dp"
+                android:hint="Date and Time"
+                android:inputType="date"
+                android:padding="24dp"
+                android:textColor="@color/black"
+                android:textColorHint="#9C000000" />
+
+            <EditText
+                android:id="@+id/Price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:hint="Monthly Price"
+                android:drawablePadding="8dp"
+                android:padding="24dp"
+                android:textColor="@color/black"
+                android:textColorHint="#9C000000" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/radio_furniture_type">
+
+                <RadioButton
+                    android:id="@+id/furnished"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Furnished"
+                    android:textColor="#9C000000"
+                    android:textSize="6pt"
+                    android:textStyle="bold">
+
+                </RadioButton>
+
+                <RadioButton
+                    android:id="@+id/part_furnish"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Part Furnished"
+                    android:textColor="#9C000000"
+                    android:textSize="6pt"
+                    android:textStyle="bold">
+
+                </RadioButton>
+
+                <RadioButton
+                    android:id="@+id/unfurnished"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="UnFurnished"
+                    android:textColor="#9C000000"
+                    android:textSize="6pt"
+                    android:textStyle="bold">
+
+                </RadioButton>
+            </RadioGroup>
+
+            <EditText
+                android:id="@+id/Remark"
+                android:layout_width="143pt"
+                android:layout_height="50pt"
+                android:layout_margin="16dp"
+                android:drawablePadding="8dp"
+                android:hint="Remarks"
+                android:padding="24dp"
+                android:textColor="@color/black"
+                android:textColorHint="#9C000000" />
+
+            <EditText
+                android:id="@+id/reporter_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:hint="Name of the Reporter"
+                android:drawablePadding="8dp"
+                android:padding="24dp"
+                android:textColor="@color/black"
+                android:textColorHint="#9C000000" />
+
+
+            <Button
+                android:id="@+id/InsertButton"
+                android:layout_width="match_parent"
+                android:layout_height="59dp"
+                android:layout_marginBottom="16dp"
+                android:backgroundTint="@color/black"
+                android:layout_marginTop="20dp"
+                android:text="@string/add_new"
+                android:textColor="#FFFFFF"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <Button
+                android:id="@+id/Cancel"
+                android:layout_width="match_parent"
+                android:layout_height="59dp"
+                android:layout_marginBottom="60dp"
+                android:backgroundTint="@color/black"
+                android:onClick="TxtClickCancel"
+                android:text="@string/cancel"
+                android:textColor="#FFFFFF"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+
+
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        app:menu="@menu/bottom_menu"
+        android:background="@color/white" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

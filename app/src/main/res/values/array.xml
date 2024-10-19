@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="property_type_array">
+        "","Flat","House","Bungalow"
+        <item>Select Property Type</item>
+        <item>Flat</item>
+        <item>House</item>
+        <item>Bungalow</item>
+    </array>
+    <array name="bedroom_array">
+        <item>Select Bedrooms</item>
+        <item>Studio</item>
+        <item>One</item>
+        <item>Two</item>
+    </array>
+</resources>
